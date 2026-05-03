@@ -4,10 +4,10 @@ def add_event(name, log=[]):
 
 
 def session_events(events):
-    log = []
+    result = []
     for e in events:
-        log = add_event(e, log)
-    return log
+        result = add_event(e)
+    return result
 
 
 if __name__ == "__main__":
