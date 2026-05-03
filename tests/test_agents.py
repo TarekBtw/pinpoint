@@ -45,3 +45,24 @@ def test_tracer_emits_trace_report_structure():
     assert "Hypotheses considered" in text
     assert "Witness" in text
     assert "Fix surface" in text
+
+
+FIXER = REPO_ROOT / "agents" / "pinpoint-fixer.md"
+
+
+def test_fixer_exists():
+    assert FIXER.is_file()
+
+
+def test_fixer_frontmatter_allows_edit():
+    fm = _frontmatter(FIXER)
+    assert fm["name"] == "pinpoint-fixer"
+    tools = fm.get("tools", "")
+    assert "Edit" in tools, "fixer must have access to Edit"
+    assert "Read" in tools, "fixer must have access to Read"
+
+
+def test_fixer_requires_trace_report_input():
+    text = FIXER.read_text(encoding="utf-8")
+    assert "Trace Report" in text
+    assert "Fix surface" in text
