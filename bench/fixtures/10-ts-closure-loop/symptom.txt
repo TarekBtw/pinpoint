@@ -1,0 +1,1 @@
+buildHandlers(3) is supposed to produce 3 functions returning 0, 1, 2 respectively. Instead, calling each handler returns 3. All three closures share the same i.

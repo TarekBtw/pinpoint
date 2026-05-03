@@ -1,0 +1,1 @@
+importUsers prints "imported 2" before saveUser's setTimeout has fired even once. Downstream code that depends on the rows being persisted runs before saveUser actually completes. Counter is incremented synchronously, but the await in saveUser is never honored by the caller.

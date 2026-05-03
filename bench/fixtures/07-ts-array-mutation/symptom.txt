@@ -1,0 +1,3 @@
+After calling topN(scores, 2, ...), the original `scores` array prints as
+[{name:"a",v:3},{name:"c",v:2},{name:"b",v:1}]
+i.e. it has been reordered. topN is supposed to be a pure read; callers don't expect their input to be permuted.

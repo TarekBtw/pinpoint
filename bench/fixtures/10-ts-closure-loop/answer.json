@@ -1,0 +1,7 @@
+{
+  "root_cause_file": "bug.ts",
+  "root_cause_line": 3,
+  "root_cause_summary": "var i is function-scoped, so all closures created in the loop close over the same i; after the loop runs, i === n === 3, and every handler returns 3",
+  "alternative_acceptable_lines": [4],
+  "category": "logic-error"
+}

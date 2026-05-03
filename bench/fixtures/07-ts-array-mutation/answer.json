@@ -1,0 +1,7 @@
+{
+  "root_cause_file": "bug.ts",
+  "root_cause_line": 2,
+  "root_cause_summary": "Array.prototype.sort sorts in place AND returns the same array; chaining .slice() doesn't undo the mutation of the input",
+  "alternative_acceptable_lines": [],
+  "category": "state-mutation"
+}

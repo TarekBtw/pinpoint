@@ -1,0 +1,7 @@
+{
+  "root_cause_file": "bug.ts",
+  "root_cause_line": 6,
+  "root_cause_summary": "Array.includes uses SameValueZero (effectively reference equality for objects); two distinct UserId objects with the same `value` are not deduplicated",
+  "alternative_acceptable_lines": [],
+  "category": "logic-error"
+}

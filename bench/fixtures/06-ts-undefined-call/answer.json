@@ -1,0 +1,7 @@
+{
+  "root_cause_file": "bug.ts",
+  "root_cause_line": 9,
+  "root_cause_summary": "non-null assertion `item.promo!` lies to the type system; the second cart item has no promo, but the assertion suppresses the type error and the runtime crash surfaces inside applyPromo",
+  "alternative_acceptable_lines": [8],
+  "category": "type-mismatch"
+}

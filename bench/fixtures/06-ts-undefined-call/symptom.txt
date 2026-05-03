@@ -1,0 +1,4 @@
+TypeError: Cannot read properties of undefined (reading 'pct')
+    at applyPromo (bug.ts:4:23)
+    at lineTotal (bug.ts:9:10)
+    at bug.ts:17:36

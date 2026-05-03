@@ -1,0 +1,7 @@
+{
+  "root_cause_file": "bug.ts",
+  "root_cause_line": 8,
+  "root_cause_summary": "rows.forEach with an async callback ignores the returned Promise; saveUser is fire-and-forget, so importUsers resolves before any save completes",
+  "alternative_acceptable_lines": [7, 9],
+  "category": "async-race"
+}

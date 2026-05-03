@@ -1,0 +1,1 @@
+dedupe([a, b]) returns 2, but a.value === b.value === "u1" — they should be considered duplicates. The function compares by reference identity, not by value.
