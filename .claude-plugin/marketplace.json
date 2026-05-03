@@ -7,7 +7,10 @@
   "plugins": [
     {
       "name": "pinpoint",
-      "source": ".",
+      "source": {
+        "source": "github",
+        "repo": "TarekBtw/pinpoint"
+      },
       "description": "Static root-cause tracing for bugs."
     }
   ]
