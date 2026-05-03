@@ -1,0 +1,7 @@
+{
+  "root_cause_file": "bug.py",
+  "root_cause_line": 11,
+  "root_cause_summary": "line_total assumes every item has a 'promo' key, but the second cart item does not",
+  "alternative_acceptable_lines": [10, 18],
+  "category": "null-deref"
+}

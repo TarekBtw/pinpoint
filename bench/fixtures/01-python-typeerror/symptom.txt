@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "bug.py", line 19, in <module>
+    print(cart_total(cart))
+  File "bug.py", line 15, in cart_total
+    return sum(line_total(i) for i in items)
+  File "bug.py", line 15, in <genexpr>
+    return sum(line_total(i) for i in items)
+  File "bug.py", line 11, in line_total
+    return apply_discount(item["promo"], base)
+KeyError: 'promo'
