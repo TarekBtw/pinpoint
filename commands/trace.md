@@ -33,7 +33,7 @@ repo_root:
 <paste the user's current working directory here, absolute path>
 
 language_hints:
-<list languages detected from extensions in the repo, plus tooling availability — check with `which pyright`, `which tsc`, `which cargo`, `which go`>
+<list languages detected from extensions in the repo, plus tooling availability — check with `which pyright` and `which tsc`>
 
 Run the 6-phase protocol from your instructions. Emit a single Trace Report and nothing else.
 """

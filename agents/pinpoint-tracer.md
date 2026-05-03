@@ -46,8 +46,6 @@ Use the available tools:
 - `Bash` to invoke language-specific tooling **once per session** if available:
   - Python: `pyright --outputjson <repo_root>` and `python -m py_compile <file>`
   - TypeScript / JavaScript: `tsc --noEmit --pretty false -p <repo_root>` (only if `tsconfig.json` exists)
-  - Rust: `cargo check --message-format=json` (only if `Cargo.toml` exists)
-  - Go: `go vet ./...` (only if `go.mod` exists)
 - If a tool is missing or fails, log it and continue with `Read`+`Grep`+tree-sitter alone. Never fail the trace because a tool is missing.
 
 **Gate:** at least one supporting and one eliminating observation per remaining hypothesis, OR an explicit "could not eliminate" note.
