@@ -35,5 +35,17 @@ def test_trace_command_dispatches_tracer():
 
 def test_trace_command_handles_modes():
     text = TRACE_CMD.read_text(encoding="utf-8")
-    for mode in ["--fix", "--bench", "github.com"]:
+    for mode in ["--fix", "--bench", "github"]:
         assert mode in text, f"command must reference {mode!r} mode"
+
+
+def test_trace_command_anchors_confidence_low_guardrail():
+    text = TRACE_CMD.read_text(encoding="utf-8")
+    assert "Confidence: low" in text, "must reference low-confidence branch"
+    assert "do not" in text.lower(), "must instruct main Claude not to dispatch fixer on low confidence"
+
+
+def test_trace_command_anchors_save_flow():
+    text = TRACE_CMD.read_text(encoding="utf-8")
+    assert ".pinpoint/traces/" in text, "must reference the trace save path"
+    assert "Want me to apply the fix" in text, "must ask before fixing"

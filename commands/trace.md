@@ -12,7 +12,7 @@ The user invoked `/trace`. Parse `$ARGUMENTS` and dispatch.
 1. **Empty arguments.** Ask: "What's the symptom? Paste the error, stack trace, failing test name, or describe the bug." Wait for the next message and treat that as `$ARGUMENTS`.
 2. **`--bench`.** Run `python bench/runner.py --all` from the plugin directory. Stream the output. Do not dispatch any agent.
 3. **`--fix <symptom>`.** First trace, then fix (see "Fix mode" below).
-4. **GitHub issue URL** (matches `https://github.com/.+/issues/\d+`). Use `WebFetch` to retrieve the issue page. Extract the issue title + body. Treat the body as the symptom. Continue to "Trace mode".
+4. **GitHub issue or PR URL** (matches `^https://github\.com/[^/]+/[^/]+/(?:issues|pull)/\d+(?:[/?#].*)?$`). Use `WebFetch` to retrieve the page. Extract the title + body. Treat the body as the symptom. Continue to "Trace mode".
 5. **Anything else.** Treat as the literal symptom string. Continue to "Trace mode".
 
 ## Trace mode
@@ -87,3 +87,4 @@ from the plugin's installed directory (resolve via `${CLAUDE_PLUGIN_ROOT}` if se
 - If the user's `cwd` is not a git repo, warn: "Pinpoint works best inside a project. Continue anyway? (y/n)". On `y`, proceed.
 - If the GitHub issue URL is private or unreachable, ask the user to paste the issue body directly.
 - If `bench/runner.py` is missing, print: "Benchmark runner not installed. See bench/README.md for setup."
+- If the tracer returns no Trace Report, or the returned report has no `**Confidence:**` line, print: "Tracer did not return a parseable report. Rerun `/trace` or paste the symptom again with more context." In `--fix` mode, do not dispatch the fixer.
