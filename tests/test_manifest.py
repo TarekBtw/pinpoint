@@ -30,3 +30,9 @@ def test_marketplace_lists_pinpoint():
     assert "plugins" in data and isinstance(data["plugins"], list)
     names = [p["name"] for p in data["plugins"]]
     assert "pinpoint" in names
+
+
+def test_marketplace_has_owner():
+    data = _load(".claude-plugin/marketplace.json")
+    assert isinstance(data.get("owner"), dict), "marketplace.json must have an owner object (Claude Code schema requirement)"
+    assert isinstance(data["owner"].get("name"), str) and data["owner"]["name"]

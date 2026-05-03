@@ -1,5 +1,8 @@
 {
   "name": "pinpoint-marketplace",
+  "owner": {
+    "name": "TarekBtw"
+  },
   "description": "Marketplace listing for the Pinpoint plugin.",
   "plugins": [
     {
