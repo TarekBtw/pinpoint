@@ -10,11 +10,11 @@ def _load(rel_path):
 
 
 def test_plugin_manifest_exists():
-    assert (REPO_ROOT / "plugins" / "pinpoint" / ".claude-plugin" / "plugin.json").is_file()
+    assert (REPO_ROOT / ".claude-plugin" / "plugin.json").is_file()
 
 
 def test_plugin_manifest_required_fields():
-    data = _load("plugins/pinpoint/.claude-plugin/plugin.json")
+    data = _load(".claude-plugin/plugin.json")
     assert data["name"] == "pinpoint"
     assert data["version"] == "0.1.0"
     assert isinstance(data.get("description"), str) and data["description"]

@@ -7,7 +7,7 @@
   "plugins": [
     {
       "name": "pinpoint",
-      "source": "./plugins/pinpoint",
+      "source": "./",
       "description": "Static root-cause tracing for bugs."
     }
   ]

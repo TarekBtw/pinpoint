@@ -2,7 +2,7 @@ from pathlib import Path
 import re
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
-TRACE_CMD = REPO_ROOT / "plugins" / "pinpoint" / "commands" / "trace.md"
+TRACE_CMD = REPO_ROOT / "commands" / "trace.md"
 
 
 def _frontmatter(path: Path) -> dict:

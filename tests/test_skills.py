@@ -2,7 +2,7 @@ from pathlib import Path
 import re
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
-NUDGE = REPO_ROOT / "plugins" / "pinpoint" / "skills" / "pinpoint-nudge" / "SKILL.md"
+NUDGE = REPO_ROOT / "skills" / "pinpoint-nudge" / "SKILL.md"
 
 
 def _frontmatter(path: Path) -> dict:
