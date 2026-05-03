@@ -1,0 +1,4 @@
+Running the script prints:
+  ['a', 'b']
+  ['a', 'b', 'c', 'd']
+The second session inherits the first session's events even though session_events explicitly creates a fresh `log = []`. Events from prior sessions are leaking through.

@@ -1,0 +1,1 @@
+After running 100 concurrent c.increment() calls, c.value is 1, not 100. The coroutines are reading and writing self.value with an await between them, so concurrent increments overwrite each other.

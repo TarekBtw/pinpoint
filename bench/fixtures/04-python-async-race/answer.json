@@ -1,0 +1,7 @@
+{
+  "root_cause_file": "bug.py",
+  "root_cause_line": 9,
+  "root_cause_summary": "read-modify-write of self.value spans an await point, so concurrent coroutines all read the same `current` and write `current+1`",
+  "alternative_acceptable_lines": [10, 11],
+  "category": "async-race"
+}

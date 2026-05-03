@@ -1,0 +1,7 @@
+{
+  "root_cause_file": "bug.py",
+  "root_cause_line": 8,
+  "root_cause_summary": "load_config swallows ALL exceptions and returns {}, masking real errors like JSONDecodeError or PermissionError; the bare except hides why the config didn't load",
+  "alternative_acceptable_lines": [7, 9],
+  "category": "silent-exception"
+}

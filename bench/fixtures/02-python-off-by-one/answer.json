@@ -1,0 +1,7 @@
+{
+  "root_cause_file": "bug.py",
+  "root_cause_line": 8,
+  "root_cause_summary": "last_page computed as len // per_page instead of (len-1) // per_page; for len=10, per_page=5, last_page should be 1, not 2 (and the >, not >=, makes the boundary inconsistent)",
+  "alternative_acceptable_lines": [9],
+  "category": "off-by-one"
+}

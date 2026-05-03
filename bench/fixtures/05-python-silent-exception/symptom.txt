@@ -1,0 +1,1 @@
+get_max_users("config.json") raises KeyError: 'max_users'. The config file does exist on disk and contains {"max_users": 100, ...}. Adding a print(config) shows config is {} — the file is being read as empty even though it isn't.

@@ -1,0 +1,7 @@
+{
+  "root_cause_file": "bug.py",
+  "root_cause_line": 1,
+  "root_cause_summary": "mutable default argument log=[] is shared across all calls of add_event; the inner module-level list accumulates across sessions",
+  "alternative_acceptable_lines": [2],
+  "category": "state-mutation"
+}

@@ -1,0 +1,1 @@
+Calling get_page(items=list(range(10)), page=2, per_page=5) raises ValueError("page 2 out of range (max 2)") even though page 2 should be the third page in zero-indexed pagination, and the data clearly has enough items for it. Calling get_page(items, 1, 5) returns [5,6,7,8,9] correctly. The off-by-one is in the boundary check.
