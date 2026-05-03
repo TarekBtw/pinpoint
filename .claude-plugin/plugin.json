@@ -3,10 +3,10 @@
   "version": "0.1.0",
   "description": "Static root-cause tracing for bugs. Forces Claude to follow a 6-phase methodology before proposing any fix.",
   "license": "MIT",
-  "homepage": "https://github.com/PLACEHOLDER_OWNER/pinpoint",
+  "homepage": "https://github.com/TarekBtw/pinpoint",
   "repository": {
     "type": "git",
-    "url": "https://github.com/PLACEHOLDER_OWNER/pinpoint.git"
+    "url": "https://github.com/TarekBtw/pinpoint.git"
   },
   "keywords": ["debugging", "static-analysis", "claude-code", "root-cause"]
 }

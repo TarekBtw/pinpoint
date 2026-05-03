@@ -15,7 +15,7 @@ Asking Claude to "fix this bug" usually pattern-matches against the symptom and 
 
 ```bash
 # In Claude Code:
-/plugin marketplace add YOUR_GH_USERNAME/pinpoint
+/plugin marketplace add TarekBtw/pinpoint
 /plugin install pinpoint
 ```
 
@@ -32,7 +32,7 @@ You get back a structured **Trace Report**: anchor, ruled-out hypotheses, a Merm
 
 ## Demo
 
-Try it in 30 seconds: clone [pinpoint-demo](https://github.com/YOUR_GH_USERNAME/pinpoint-demo), open it in Claude Code, run `/trace` on any of the seeded bugs.
+Try it in 30 seconds: clone [pinpoint-demo](https://github.com/TarekBtw/pinpoint-demo), open it in Claude Code, run `/trace` on any of the seeded bugs.
 
 ## The methodology
 
