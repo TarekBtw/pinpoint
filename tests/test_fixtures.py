@@ -2,7 +2,7 @@ import json
 from pathlib import Path
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
-FIXTURES = REPO_ROOT / "bench" / "fixtures"
+FIXTURES = REPO_ROOT / "plugins" / "pinpoint" / "bench" / "fixtures"
 
 REQUIRED_FILES = ["symptom.txt", "answer.json", "README.md"]
 VALID_CATEGORIES = {

@@ -9,5 +9,5 @@ dependencies = []
 dev = ["pytest>=7", "pytest-mock>=3"]
 
 [tool.pytest.ini_options]
-testpaths = ["tests", "bench/tests"]
-pythonpath = ["."]
+testpaths = ["tests", "plugins/pinpoint/bench/tests"]
+pythonpath = [".", "plugins/pinpoint"]

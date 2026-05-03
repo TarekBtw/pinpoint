@@ -2,7 +2,7 @@ from pathlib import Path
 import re
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
-TRACER = REPO_ROOT / "agents" / "pinpoint-tracer.md"
+TRACER = REPO_ROOT / "plugins" / "pinpoint" / "agents" / "pinpoint-tracer.md"
 
 PHASES = ["Anchor", "Hypothesis", "Backward trace", "Invariant", "Witness", "Pinpoint"]
 
@@ -47,7 +47,7 @@ def test_tracer_emits_trace_report_structure():
     assert "Fix surface" in text
 
 
-FIXER = REPO_ROOT / "agents" / "pinpoint-fixer.md"
+FIXER = REPO_ROOT / "plugins" / "pinpoint" / "agents" / "pinpoint-fixer.md"
 
 
 def test_fixer_exists():
