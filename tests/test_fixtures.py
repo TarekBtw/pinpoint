@@ -34,6 +34,8 @@ def test_each_answer_json_well_formed():
         for key in ("root_cause_file", "root_cause_line", "root_cause_summary", "category"):
             assert key in data, f"{d.name}/answer.json missing {key}"
         assert isinstance(data["root_cause_line"], int)
+        assert all(isinstance(x, int) for x in data.get("alternative_acceptable_lines", [])), \
+            f"{d.name}/answer.json alternative_acceptable_lines must be list[int]"
         assert data["category"] in VALID_CATEGORIES, f"{d.name} bad category {data['category']!r}"
         named_file = d / data["root_cause_file"]
         assert named_file.is_file(), f"{d.name}/answer.json points to non-existent file {data['root_cause_file']}"

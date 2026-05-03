@@ -26,3 +26,12 @@ Each fixture's `category` field must be one of:
 ## Acceptable answer
 
 A trace is scored correct if its `Root cause:` line names a file matching `root_cause_file` AND a line that is either `root_cause_line` or in `alternative_acceptable_lines`. The line tolerance handles formatting drift.
+
+### Line-number convention
+
+If `symptom.txt` is a stack trace pasted from a previous run, its line numbers may not match the current `bug.<ext>` exactly (whitespace edits, reformatting, etc.). The convention is:
+
+- `root_cause_line` — the line number as it appears in `symptom.txt` (paste-relative). This is what a model trained on the symptom would naturally cite.
+- `alternative_acceptable_lines` — the *current* line in `bug.<ext>` (file-relative), plus any other lines a reasonable trace might cite (e.g., the data definition site that should also have been guarded).
+
+`alternative_acceptable_lines` is optional; omit it or pass `[]` if there's no drift and no alternative.
