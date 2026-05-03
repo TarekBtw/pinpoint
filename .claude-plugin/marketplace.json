@@ -8,8 +8,8 @@
     {
       "name": "pinpoint",
       "source": {
-        "source": "github",
-        "repo": "TarekBtw/pinpoint"
+        "source": "url",
+        "url": "https://github.com/TarekBtw/pinpoint.git"
       },
       "description": "Static root-cause tracing for bugs."
     }
