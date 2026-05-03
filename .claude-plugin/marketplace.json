@@ -1,0 +1,11 @@
+{
+  "name": "pinpoint-marketplace",
+  "description": "Marketplace listing for the Pinpoint plugin.",
+  "plugins": [
+    {
+      "name": "pinpoint",
+      "source": ".",
+      "description": "Static root-cause tracing for bugs."
+    }
+  ]
+}
